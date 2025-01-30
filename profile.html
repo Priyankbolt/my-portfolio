@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef1f7;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background: #34495e;
+            margin: 0;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: background 0.3s;
+            z-index: 1000;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        section {
+            max-width: 900px;
+            margin: 80px auto 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #2c3e50;
+            color: white;
+            font-size: 1rem;
+        }
+        .scrolled {
+            background: rgba(52, 73, 94, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        My Professional Portfolio
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello there! 
+            Myself priyank silswal ,Currently a B.Sc.(hons) Computer Science Student at Galgotias University. 
+             I have ability to work under high pressure and stressed environment.I am very practical person with an amiable disposition amd strong cultural values.
+            I strongly believe in accuracy and precision in whatever I do.I believe I have good communication skills that would provide transparency and productivity in the 
+            organisation Keen Interest in reading books,web development,sketching and learning new things.</p>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <p>10 th passed and 12 th passed from C.B.S.E Board</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>A collection of significant projects like clones of companies like amazon,flipkart and simple games like tic tac toe,rock paper scissor etc. showcasing my expertise and innovation.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Excellent  verbal and written communication.</li>
+            <li>Active listener.</li>
+            <li>Good at interacting with people and problem solving.</li>
+            <li>Good at using MS office.</li>
+<li>Fast learner</li>
+<li>Good at working under a team and managing people.</li>
+
+
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Info</h2>
+        <p>Email: silswalpriyank@example.com</p>
+                <p>Phone: 9310458794</p>
+                <p>Location: Chhalera, sec-44,Noida, up, india</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 My Professional Portfolio. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const nav = document.querySelector("nav ul");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add("scrolled");
+                } else {
+                    nav.classList.remove("scrolled");
+                }
+            });
+            const navLinks = document.querySelectorAll("nav ul li a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", event => {
+                    event.preventDefault();
+                    const section = document.querySelector(link.getAttribute("href"));
+                    section.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
